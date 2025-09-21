@@ -14,7 +14,6 @@ def count_sort_radix(arr,exp):
         index = (num // exp)% 10
         output[count[index]-1] = num
         count[index] -= 1
-
     return output
 
 def radix_sort(arr):
@@ -27,7 +26,6 @@ def radix_sort(arr):
         arr = count_sort_radix(arr,exp)
         exp *= 10
     return arr
-
 
 arr = [25,14,12,68,53,47,23,25]
 print(radix_sort(arr))
